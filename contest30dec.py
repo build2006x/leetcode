@@ -19,3 +19,6 @@ while p1 < len(nums) - 1:
                   
 
 print(count)
+
+###this is sum i am stoping beacuse of i cant find the question number to solve this again 
+#but somehow i was just learning something good
