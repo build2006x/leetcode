@@ -3,7 +3,7 @@
 #orelse false 
 
 
-#what logic i think in my mind is like 
+#what logic i think in my mind is like
 #keeping a pointer varible move them until 
 #reasign the variable to the pointer and check with like steps == len(nums) - 1: len(nums) is real index of the nums 
 #our focus the jumping is can reach the position towards the last index 
