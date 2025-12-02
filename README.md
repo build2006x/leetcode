@@ -2,5 +2,5 @@ this is i am doing to showcase my logical thinking through the problem sovling s
 
 first day : i encounter with my contest problem 
 
-second day : first problem is easy database combine sums 
+second day : first problem is easy database combine sums like jump medium level sum
 
