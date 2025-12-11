@@ -32,6 +32,7 @@ def twoSum():
         if nums[p1] + nums[p2] == target:
             print(p1,p2)
         p2 -=1
+        
     print('cant find')
       
 
