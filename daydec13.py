@@ -5,7 +5,7 @@ t = "ahbgd"
 #s to t 
 
 #like i am thinking keep two pointer at the start of the two string one is s and another one is t 
-#like the way i will move the pointer based on the compare of the both string 
+#like the way i will move the pointer based on the compare of the both str
 
 def sequence(s,t):
     sender = 0
