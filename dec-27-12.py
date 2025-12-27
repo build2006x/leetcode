@@ -27,4 +27,13 @@
 ##lastly i compared them with double condition in the where statement 
 
 ##select  * from emp as a ,emp as b 
-##where  a.salary = b.salary and a.salary > b.salary 
+##where  a.salary = b.salary and a.salary > b.salary\\
+
+
+'''
+select a.name as empolyee 
+from empolyee as a ,empolyee as b
+where a.managerid = b.id and a.salary > b.salary 
+'''
+###final query for the 
+##select a.name as empolyee 
