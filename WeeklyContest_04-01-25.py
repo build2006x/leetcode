@@ -1,5 +1,5 @@
 ###today sum is like 
-
+###this proble being sovled now 
 s = "221"
 
 arr = list(s)
