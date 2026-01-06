@@ -8,32 +8,25 @@
 ## or else keep -1 in the result array 
 ## at last return the array
 
-nums1 = [4,1,2]
-nums2 = [1,3,4,2]
 
-point1 = 0
-point2 = 0
 
+
+nums1 = [2,4]
+nums2 = [1,2,3,4]
 result = []
 
-while point1 < len(nums1):
-      check = 0
-      next_greater = 0
-      while point2 < len(nums2):
-            if nums1[point1] == nums2[point2]:
-                  check = point2 + 1
-            point2 +=1  
-      while nums2[check] < len(nums2):
-            if nums1[point1] > nums2[check]:
-                  next_greater = nums2[check]
-                  break
-      check +=1
-      result.append(next_greater)
-      point1 +=1
-      check = 0
-      point2 = 0
+for i in nums1:
+    next_greater = -1
+    index = nums2.index(i)
+    print(index)
+    for j in range(index+1,len(nums2)):
+        if i  < nums2[j]:
+            next_greater = nums2[j]
+            break
+    result.append(next_greater)
 
 
 print(result)
+
     
 
