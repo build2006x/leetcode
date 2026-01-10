@@ -5,10 +5,10 @@
 result = [1,0]
 check = ""
 
-for i in range(0,6):
-    if i % 2 == 0:
-        check = check + str(1)
+for i in range(1,6):
+    if i%2 == 0:
+        check = str(0) + check
         print(check)
     else:
-        check = check + str(0)
+        check = str(1) + check
         print(check)
