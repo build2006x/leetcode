@@ -14,7 +14,6 @@ result = plaindrome(string="TAKE U FORWARD")
 ### inplace two pointer approach 
 string = "ABCDCBA"
 
-
 def plaindromePointer():
         start = 0
         end = len(string)-1
@@ -27,4 +26,29 @@ def plaindromePointer():
         return True
 
 result = plaindrome(string="TAKE U FORWARD")
+### brute force appraoch for the plaindrome string 
+
+string = "TAKE U FORWARD"
+new_string = ""
+end = len(string) - 1
+
+for i in range(0,len(string)):
+       new_string = new_string + string[end]
+       end -=1
+
+if string == new_string:
+       print('plaindrome')
+else:
+       print('not a plaindrome')
+             
+### using the optimal ways of solving this problem 
+### using the recursion techinique i am going to solve this problem
+
+def recursion(string,start,end):
+       if string[Start] == string[end]:
+
+
+result = recursion(string="ABCDCBA",Start=0,end=-1)
 print(result)
+
+
