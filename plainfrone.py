@@ -28,27 +28,30 @@ def plaindromePointer():
 result = plaindrome(string="TAKE U FORWARD")
 ### brute force appraoch for the plaindrome string 
 
-string = "TAKE U FORWARD"
-new_string = ""
-end = len(string) - 1
+# string = "TAKE U FORWARD"
+# new_string = ""
+# end = len(string) - 1
 
-for i in range(0,len(string)):
-       new_string = new_string + string[end]
-       end -=1
+# for i in range(0,len(string)):
+#        new_string = new_string + string[end]
+#        end -=1
 
-if string == new_string:
-       print('plaindrome')
-else:
-       print('not a plaindrome')
+# if string == new_string:
+#        print('plaindrome')
+# else:
+#        print('not a plaindrome')
              
 ### using the optimal ways of solving this problem 
 ### using the recursion techinique i am going to solve this problem
 
-def recursion(string,start,end):
-       if string[Start] == string[end]:
+### this is a techinque for checking the palindrome
 
+def recursion_plaindrome(string,start,end):
+       if string[start] != string[end]:
+                  return print("False")  ### this condition is for invaild string 
+       elif start == end:
+                  return print('True')  ### checking that like if the pointer both reach the center means true 
+       else:
+             recursion_plaindrome(string,start+1,end-1) ### if not both call again until hit any one condition 
 
-result = recursion(string="ABCDCBA",Start=0,end=-1)
-print(result)
-
-
+recursion_plaindrome(string="TAKE U FORWARD",start=0,end=len(string)-1)
