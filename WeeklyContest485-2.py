@@ -1,0 +1,5 @@
+### maximum capacity within the budget
+
+costs = [4,8,5,3]
+capacity = [1,5,2,7]
+budget = 8
