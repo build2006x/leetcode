@@ -33,10 +33,37 @@
 
 ### i am now trying to do with thinking in the brute force 
 
-n1,n2 = 0,1
-n = 5
-for i in range(0,n+1):
-    print(n1)
-    n1,n2 = n2,n1+n2
+# n1,n2 = 0,1
+# n = 5
+# for i in range(0,n+1):
+#     print(n1)
+#     n1,n2 = n2,n1+n2
 
+
+#### today again learning the fibonacci series much more deep understading
+### to find the fibo series of a number ---- n(5) = n(5-1) + n(5-2) 
+
+# n = 5
+# j = []
+# j.append(0)
+# j.append(1)
+
+# for i in range(2,n+1):
+#       j.append(j[i-1]+j[i-2])
+# print(j)
+  
+
+### this is brute force approach i am giving here 
+### now i am going to make this above approach through the recursion 
+
+def fiboSeries(n,N,count):
+      if N == 0:
+            return n
+      n.append(0)
+      n.append(1)
+      n.append(n[count-1]+n[count-2])
+      return fiboSeries()
+
+result =fiboSeries([0,1],5,count=2)
+print(result)
 
