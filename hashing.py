@@ -8,11 +8,17 @@
 ##2- how to the char hashing 
 ###3 - how to optimized for the size of big hashing 
 
+arr = "hello"
+hash_map  = {}
+final = []
 
-arr = "abcdabefc"
-hash = [0] * 5
+for i in arr:
+    if i in hash_map:
+        hash_map[i] +=1
+    else:
+        hash_map[i] =1
 
-for num in str(arr):
-     hash[int(num)] +=1
- 
-print(hash[3])
+max = max(hash_map.values())
+print(hash_map.get(max))
+### here in python we use dict to store the value likely prestoring to avoid the query again and again 
+     
