@@ -56,14 +56,17 @@
 ### this is brute force approach i am giving here 
 ### now i am going to make this above approach through the recursion 
 
-def fiboSeries(n,N,count):
-      if N == 0:
-            return n
-      n.append(0)
-      n.append(1)
-      n.append(n[count-1]+n[count-2])
-      return fiboSeries()
 
-result =fiboSeries([0,1],5,count=2)
+def recursion_fibonnaci(n,count):
+    count = n
+    series = []
+    series.append(0)
+    series.append(1)
+    for i in range(2,n+1):
+        series.append((series[i-1]+series[i-2]))
+    if count == 0 :
+        return series
+    return recursion_fibonnaci(n,count-1)
+
+result = recursion_fibonnaci(5,count=0)
 print(result)
-
