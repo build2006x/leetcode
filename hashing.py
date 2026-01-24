@@ -47,15 +47,29 @@
 ### --- for sovling this problem two techinque -- open addressing and closed addressing 
 ### started learning from the video resource of the hashing 
 
-arr = [1,3,3,2,1,4]
-array = {}
+# arr = [1,3,3,2,1,4]
+# array = {}
 
-for i in arr:
-    if i in array:
-        array[i] +=1
-    else:
-        array[i] = 1
+# for i in arr:
+#     if i in array:
+#         array[i] +=1
+#     else:
+#         array[i] = 1
 
-print(array)
+# print(array)
 #### one strong way of understanding now i am having in the hash 
 ### storing the key and values 
+
+
+### now trying the hashing way of solving this problem 
+
+arries = [1,2,3,1]
+arr = [0] * 4
+
+for i in arries:
+    if i in arr:
+        arr[i] +=1
+    else:
+        arr[i] =1 
+
+print(arr)
