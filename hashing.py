@@ -62,14 +62,45 @@
 
 
 ### now trying the hashing way of solving this problem 
+### in hashing nothing we are mapping the index to the number of frequency count 
+# arries = [1,2,3,1]
+# arr = [0] * 4
 
-arries = [1,2,3,1]
-arr = [0] * 4
+# for i in arries:
+#     if i in arr:
+#         arr[i] +=1
+#     else:
+#         arr[i] =1 
 
-for i in arries:
-    if i in arr:
-        arr[i] +=1
-    else:
-        arr[i] =1 
+# print(arr)
 
-print(arr)
+
+##### --- character hashing --in python
+
+# arr = ['a','a','c','d']
+# main = {}
+
+# for i in arr:
+#     if i in main:
+#         main[i] +=1
+#     else:
+#         main[i] =1
+
+# print(main)
+
+#### now we are going for the best approach of using the ascii ---- 
+
+arr = ['a','b','c','d','b']
+
+freq = [0] * 26
+
+for i in arr:
+    idex = int(ord(i)) - int(ord('a'))
+    freq[idex] +=1
+
+
+print(freq[ord('b')-ord('a')])
+
+
+#### basically what we are doing means mapping the number the index to maintan its count --- 
+### here every time we gone to make calculation to store and fecth --- arr[ord()-ord()] this is for fecthing and fecthing
