@@ -90,14 +90,38 @@
 
 #### now we are going for the best approach of using the ascii ---- 
 
-arr = ['B','B','C','D','b']
+# arr = ['B','B','C','D','b']
 
-freq = [0]*256
+# freq = [0]*256
 
-for i in arr:
-    freq[ord(i)] +=1
+# for i in arr:
+#     freq[ord(i)] +=1
 
-print(freq[ord('B')])
+# print(freq[ord('B')])
 
 #### basically what we are doing means mapping the number the index to maintan its count --- 
 ### here every time we gone to make calculation to store and fecth --- arr[ord()-ord()] this is for fecthing and fecthing
+
+
+### the optimal way of storing the higher 10*9 value size of data is by using the dict in python 
+
+
+### learning of the collision --- how the hashing is workings
+
+#### for storing effciently we use the ----division method for storing counts 
+
+#### we take the module of the number and map to the index 
+
+arr = [2,16, 16, 28, 139]
+
+freq = [0] * 10
+
+for i in arr:
+    if i in arr:
+        freq[i%10] +=1
+    else:
+        freq[i%10] =1
+
+
+print(freq[16%10])
+
