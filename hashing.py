@@ -90,17 +90,14 @@
 
 #### now we are going for the best approach of using the ascii ---- 
 
-arr = ['a','b','c','d','b']
+arr = ['B','B','C','D','b']
 
-freq = [0] * 26
+freq = [0]*256
 
 for i in arr:
-    idex = int(ord(i)) - int(ord('a'))
-    freq[idex] +=1
+    freq[ord(i)] +=1
 
-
-print(freq[ord('b')-ord('a')])
-
+print(freq[ord('B')])
 
 #### basically what we are doing means mapping the number the index to maintan its count --- 
 ### here every time we gone to make calculation to store and fecth --- arr[ord()-ord()] this is for fecthing and fecthing
