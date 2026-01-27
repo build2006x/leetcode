@@ -15,7 +15,6 @@ arr = [10,5,10,15,10,5]
 freq = {}
 result = []
 
-
 for i in arr:
     if i in freq:
         freq[i] +=1
@@ -31,3 +30,7 @@ for key,val in freq.items():
     elif min_freq == val:
             print(f"Min {key} : {min_freq}")
 
+arr = [1,2,4]
+target = 5
+result = [k**2 for k in arr]
+print(result)
