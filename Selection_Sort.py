@@ -10,7 +10,7 @@ while static < len(arr):
        min_value = static
        for i in range(static+1,len(arr)):
               if arr[static] > arr[i]:
-                      min_value = i
+                      min_value = i 
        arr[static],arr[min_value] = arr[min_value],arr[static]
        static +=1
 
