@@ -24,3 +24,5 @@ print(arr)
 
 
 ### now i am perfectly understanding the behind the sences of loigc of leaving the right most element in the each iteration 
+
+### the optimal approach is to check the first swap is being take place or not is not means thats the best case 
