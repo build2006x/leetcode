@@ -7,25 +7,36 @@
 ### thrid part contains -- if condition true perform some action 
 
 ### this is basic structure of recursion algorithm 
-
+#  point1 =0
+#     point2 = point1 + 1 
+#     for i in range(0,len(arr)//2):
+#         while point2 < len(arr):
+#             if arr[point1] > arr[point2]:
+#                 arr[point1],arr[point2] = arr[point2],arr[point1]
+#                 point1 +=1
+#                 point2 +=1
+#             point2 +=1
+#             point1 +=1
+#         point1 = 0 
+#         point2 = point1 + 1
 
 
 
 def bubbleSort(arr):
-    point1 =0
+    if count == 0:
+         return arr
+    count = len(arr)//2
+    point1 = 0
     point2 = point1 + 1 
-    for i in range(0,len(arr)//2):
-        while point2 < len(arr):
-            if arr[point1] > arr[point2]:
-                arr[point1],arr[point2] = arr[point2],arr[point1]
-                point1 +=1
-                point2 +=1
-            point2 +=1
-            point1 +=1
-        point1 = 0 
-        point2 = point1 + 1
-
-    return arr
+    while count != 0 and point2 <= len(arr)-1:
+          if arr[point1] < arr[point2]:
+               arr[point1],arr[point2] = arr[point2],arr[point1]
+               point1 +=1
+               point2 +=1
+          else:
+               point1 +=1
+               point2 +=1    
+    return bubbleSort(arr)
 
 result = bubbleSort([2,3,1,45,32])
 
