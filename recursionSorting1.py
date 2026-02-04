@@ -20,24 +20,25 @@
 #         point1 = 0 
 #         point2 = point1 + 1
 
+### now i am doing initailize the bubble using not focusing core things like how many times have to run a loop 
 
 
-def bubbleSort(arr):
-    if count == 0:
-         return arr
-    count = len(arr)//2
-    point1 = 0
-    point2 = point1 + 1 
-    while count != 0 and point2 <= len(arr)-1:
-          if arr[point1] < arr[point2]:
-               arr[point1],arr[point2] = arr[point2],arr[point1]
-               point1 +=1
-               point2 +=1
+def bubbleSort(arr,p1,p2,count):
+     if count == (len(arr)//2)+1:
+           return arr
+     while p2 < len(arr):
+          if arr[p1] > arr[p2]:
+               arr[p1],arr[p2] = arr[p2],arr[p1]
+               p1 +=1
+               p2 +=1
           else:
-               point1 +=1
-               point2 +=1    
-    return bubbleSort(arr)
+               p1 +=1
+               p2 +=1
+     p1 = 0
+     p2 = p1 + 1
 
-result = bubbleSort([2,3,1,45,32])
+     return bubbleSort(arr,p1,p2,count+1)
 
+result = bubbleSort([5, 4, 3, 2, 1],p1=0,p2=1,count=0)
 print(result)
+
