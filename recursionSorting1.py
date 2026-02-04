@@ -24,10 +24,10 @@
 
 
 def bubbleSort(arr,p1,p2,count):
-     if count == (len(arr)//2)+1:
+     if count == len(arr)//2:
            return arr
-     while p2 < len(arr):
-          if arr[p1] > arr[p2]:
+     while p2 < len(arr)-count:
+          if arr[p1] < arr[p2]:
                arr[p1],arr[p2] = arr[p2],arr[p1]
                p1 +=1
                p2 +=1
@@ -39,6 +39,6 @@ def bubbleSort(arr,p1,p2,count):
 
      return bubbleSort(arr,p1,p2,count+1)
 
-result = bubbleSort([5, 4, 3, 2, 1],p1=0,p2=1,count=0)
+result = bubbleSort([5, 4, 3, 2, 1],p1=0,p2=1,count=1)
 print(result)
 
