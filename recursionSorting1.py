@@ -23,22 +23,18 @@
 ### now i am doing initailize the bubble using not focusing core things like how many times have to run a loop 
 
 
-def bubbleSort(arr,p1,p2,count):
-     if count == len(arr)//2:
-           return arr
-     while p2 < len(arr)-count:
-          if arr[p1] < arr[p2]:
+def BubbleSort(arr,count=None,p1=0,p2=1):
+     if count == None:
+        count = len(arr)
+     if count == 1:
+          return arr
+     while p2 <= count-1:
+          if arr[p1] > arr[p2]:
                arr[p1],arr[p2] = arr[p2],arr[p1]
-               p1 +=1
-               p2 +=1
-          else:
-               p1 +=1
-               p2 +=1
-     p1 = 0
-     p2 = p1 + 1
-
-     return bubbleSort(arr,p1,p2,count+1)
-
-result = bubbleSort([5, 4, 3, 2, 1],p1=0,p2=1,count=1)
+          p1 +=1
+          p2 +=1
+     return BubbleSort(arr,count-1,p1=0,p2=1)
+     
+result = BubbleSort([92,41,4,1],count=None,p1=0,p2=1)
+    
 print(result)
-
