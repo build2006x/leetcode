@@ -7,3 +7,6 @@ second day : first problem is easy database combine sums like jump medium level 
 third day : "still working on the jump game yesterday i was just get into the alogorithm greddy " " like to explain more further choosing the best possbile move to reacht the goal state "
 
 fifth day : "so i had done the jump to understand logic behind the sum "
+
+
+you can read my commit  msg to see my progess ....
