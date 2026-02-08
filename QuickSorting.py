@@ -10,16 +10,12 @@ import random
 ### quick sort 
 
 
-def QuickSort(arr,leftarr,rightarr,count):
-    if count == 0:
-           return [leftarr,rightarr]
-    random_Element  = -1
-    for i in range(len(arr)-2,-1,-1):
-            if arr[i] < arr[random_Element]:
-                    leftarr.append(arr[i])
-            else:
-                    rightarr.append(arr[i])
-    return  QuickSort(arr,leftarr,rightarr,count=0)
+def QuickSort(arr,leftArr,rightArr):
+    if len(leftArr) and len(rightArr) == 0:
+        return arr
+    PivotElement = -1
     
-result = QuickSort([9,8,3,2],leftarr=[],rightarr=[],count=1)
+
+
+result = QuickSort([3,9,2,21,1],leftArr=[],rightArr=[])
 print(result)
