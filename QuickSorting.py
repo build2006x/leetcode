@@ -9,13 +9,9 @@ import random
 ### the main core logic is about choosing the pivot element and arange them left and right based on the comparsion ....
 ### quick sort 
 
+def QuickSort(arr,left,right):
+    while len(left) and len(arr) !=0:
+        return "" 
 
-def QuickSort(arr,leftArr,rightArr):
-    if len(leftArr) and len(rightArr) == 0:
-        return arr
-    PivotElement = -1
-    
-
-
-result = QuickSort([3,9,2,21,1],leftArr=[],rightArr=[])
+result = QuickSort([3,9,2,21,1],left=[],right=[])
 print(result)
