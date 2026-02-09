@@ -60,3 +60,5 @@ result = QuickSort([3,2,12,1,9])
 print(result)
 
 ### the point is each iteration the pivot element position will be sorted in the list 
+
+### after each pass of iteration we have to decrease the len of the array 
