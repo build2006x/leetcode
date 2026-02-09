@@ -9,3 +9,5 @@ for i in range(0,len(arr)):
 
 print(Larger)
 
+
+### simple maintan a varaible to track the larger one number 
