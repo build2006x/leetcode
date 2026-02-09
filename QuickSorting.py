@@ -11,20 +11,52 @@ import random
 ### the main core logic is about choosing the pivot element and arange them left and right based on the comparsion ....
 ### quick sort 
 
-def QuickSort(arr,left,right,count):
-    if count == -1:
-        count = len(arr)
-    if count == 0:
-        return [left,right]
-    pivot_element = -1
-    for i in range(0,len(arr)):
-        if arr[i] < arr[pivot_element]:
-            left.append(arr[i])
-        else:
-            right.append(arr[i])
-    print([left,right])
-    QuickSort(left,left,right,count=count-1)
-    QuickSort(right,left,right,count=count-1)
+# QuickSort is a divide-and-conquer algorithm:
 
-result = QuickSort([3,41,2,1],left=[],right=[],count=-1)
+"""
+arr = [3,4,2,5]
+
+
+pivot_element = arr[-1]
+
+@@~~1
+
+1st iteration 
+left=[3,4,2]
+pivot_element = [5]
+
+@@~2
+arr = [3,4,2]
+
+pivot_element = [2]
+left = [3]
+right = [4]
+
+this will continue until the array becomes the len(arr) <=1 
+2sec iteration 
+left 
+
+"""
+
+def QuickSort(arr):
+    ### base case iteration runs until the len(arr) <=1
+    if len(arr) <= 1:
+        return arr
+    
+    ### intialize the pivot_element and subarray 
+    pivot_element = arr[-1]
+    left =[]
+    Rigth = []
+
+    for i in range(0,len(arr)-1): ### each iteration we know that the right most the last pivot element will be sorted
+           if arr[i] < pivot_element:
+                left.append(arr[i])
+           else:
+                 Rigth.append(arr[i])
+  
+    return QuickSort(left) + [pivot_element] + QuickSort(Rigth)
+    
+result = QuickSort([3,2,12,1,9])
 print(result)
+
+### the point is each iteration the pivot element position will be sorted in the list 
