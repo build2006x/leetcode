@@ -55,3 +55,8 @@ def RemoveDuplicate(nums):
 
 result = RemoveDuplicate([1,1,1,2,3,3,3,4,4])
 print(result)
+
+
+### barath simple ....like have two variable
+## one is for window to return the vaild element 
+## another one who explore the array and use for swaping process 
