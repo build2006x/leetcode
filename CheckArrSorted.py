@@ -20,19 +20,20 @@ new_lista = []
 
 for i in range(0,len(nums)-1):
     if nums[i] > nums[i+1]:
-        breaking +=1 
+        breaking = False 
         index = i
 
-if breaking == 1:
-    new_lista.append(nums[index:len(nums)])
-    new_lista.append(nums[0:index])
+if breaking == False:
+    new_lista.extend(nums[index+1:len(nums)])
+    new_lista.extend(nums[0:index+1])
+
 print(new_lista)
+
 for j in range(0,len(nums)-1):
+    breaking = True
     if new_lista[j] > new_lista[j+1]:
-        breaking -=1 
+        breaking = False
         break
 
-if breaking == 0:
-    print('true')
-else:
-    print('false')
+
+print(breaking)
