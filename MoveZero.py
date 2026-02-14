@@ -15,3 +15,9 @@ for j in range(0,count):
     result.append(0)
 
 print(result)
+
+
+#### above code is sovled by the brute force 
+### now we have to think for the optimal approach 
+
+#### --- two pointer method ...
