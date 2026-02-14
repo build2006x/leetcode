@@ -27,7 +27,7 @@ if breaking == False:
     new_lista.extend(nums[index+1:len(nums)])
     new_lista.extend(nums[0:index+1])
 
-print(new_lista)
+
 
 for j in range(0,len(nums)-1):
     breaking = True
