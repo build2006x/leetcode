@@ -2,16 +2,36 @@
 ### i encounter the rotate the by 1 position array element...
 
 ###### --- 
-nums = [1, 2, 3, 4, 5, 6]
-k = 2
+# nums = [1, 2, 3, 4, 5, 6]
+# k = 2
 
 ### simple brute force we can think is to append the after the 
 ###  k element in the list first and then remaining
-result = []
-for i in range(k,len(nums)):
-    result.append(nums[i])
+# result = []
+# for i in range(k,len(nums)):
+#     result.append(nums[i])
 
-for i in range(0,k):
-    result.append(nums[i])
+# for i in range(0,k):
+#     result.append(nums[i])
 
-print(result)
+# print(result)
+
+
+### again done with brute force by kth time of rotate by array 
+
+### now cracking the optimal way of doing this 
+### trying to think in optimal way of two pointer method 
+
+nums = [1, 2, 3, 4, 5, 6]
+k = 2
+
+point1 = 0
+point2 = k 
+
+while point2 !=len(nums):
+      nums[point1],nums[point2] = nums[point2],nums[point1]
+      point1 +=1
+      point2 +=1
+print(nums)
+
+### above code if for optimal approach for rotating the array 
