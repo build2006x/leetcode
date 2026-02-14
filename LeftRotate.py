@@ -13,14 +13,15 @@
 
 
 ### anothor brute force 
-nums =  [-1, 0, 3, 6]  
-result = []
+# nums =  [-1, 0, 3, 6]  
+# result = []
 
-for i in range(1,len(nums)):
-      result.append(nums[i])
-result.append(nums[0])
-print(result)
+# for i in range(1,len(nums)):
+#       result.append(nums[i])
+# result.append(nums[0])
+# print(result)
 
 
 #### this is the brute force method above now we explore the 
 #### the main optimal way of doing above problem 
+
