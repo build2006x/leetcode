@@ -22,18 +22,34 @@
 ### now cracking the optimal way of doing this 
 ### trying to think in optimal way of two pointer method 
 
-nums = [1,2,3,4,5,6,7]
-k = 3
+# nums = [1,2,3,4,5,6,7]
+# k = 3
 
-point1 = 0
-point2 = k 
-count =0
+# point1 = 0
+# point2 = k 
+# count =0
 
-while count != k:
-      nums[point1],nums[point2] = nums[point2],nums[point1]
-      point1 +=1
-      point2 +=1
-      count +=1
-print(nums)
+# while count != len(nums)-k:
+#       nums[point1],nums[point2] = nums[point2],nums[point1]
+#       point1 +=1
+#       point2 +=1
+#       count +=1
+
+# print(nums)
+
+#### two pointer wont be work for this for testcase it may fall spefically durring the odd number of lenght 
 
 ### above code if for optimal approach for rotating the array 
+
+
+arr = [1,2,3,4,5,6,7]
+
+n = 3
+
+arr.reverse()
+
+arr[:n] = reversed(arr[:n])
+
+arr[n:] = reversed(arr[n:])
+
+print(arr)
