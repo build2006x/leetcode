@@ -1,23 +1,38 @@
 #### today i working on the moving the zero to the end leetcode sum 
-nums = [1 ,0 ,2 ,3 ,0 ,4 ,0 ,1]
+# nums = [1 ,0 ,2 ,3 ,0 ,4 ,0 ,1]
 
 
 ### first let me done with brute force 
-result = []
-count = 0
-for i in range(0,len(nums)):
-    if nums[i] != 0:
-        result.append(nums[i])
-    elif nums[i] == 0:
-        count +=1
+# result = []
+# count = 0
+# for i in range(0,len(nums)):
+#     if nums[i] != 0:
+#         result.append(nums[i])
+#     elif nums[i] == 0:
+#         count +=1
 
-for j in range(0,count):
-    result.append(0)
+# for j in range(0,count):
+#     result.append(0)
 
-print(result)
+# print(result)
 
 
 #### above code is sovled by the brute force 
 ### now we have to think for the optimal approach 
 
 #### --- two pointer method ...
+
+nums = [1 ,0 ,2 ,3 ,0 ,4 ,0 ,1]
+hold  = 0
+track = 1
+
+while hold < len(nums):
+    while track < len(nums):
+          if nums[hold] != 0:
+                nums[hold],nums[track] = nums[hold],nums[track]
+                track +=1
+          track +=1   
+    hold +=1     
+    track = hold + 1
+
+print(nums)
