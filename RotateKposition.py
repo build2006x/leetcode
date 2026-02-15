@@ -43,8 +43,8 @@
 
 
 arr = [1,2,3,4,5,6,7]
-
 n = 3
+n = n % len(arr)
 
 arr.reverse()
 
@@ -53,3 +53,7 @@ arr[:n] = reversed(arr[:n])
 arr[n:] = reversed(arr[n:])
 
 print(arr)
+
+
+#### though silcing we can archive the disired result
+
