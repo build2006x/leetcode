@@ -22,17 +22,22 @@
 
 #### --- two pointer method ...
 
-nums = [1 ,0 ,2 ,3 ,0 ,4 ,0 ,1]
-hold  = 0
+arr = [4, 0, 5, 0, 0, 6]
+
+start = 0
 track = 1
 
-while hold < len(nums):
-    while track < len(nums):
-          if nums[hold] != 0:
-                nums[hold],nums[track] = nums[hold],nums[track]
-                track +=1
-          track +=1   
-    hold +=1     
-    track = hold + 1
+while start < len(arr):
+      while track < len(arr):
+            if arr[track] !=0:
+                if arr[start] == 0:
+                  arr[start],arr[track] = arr[track],arr[start]
+                  break
+                else:
+                     arr[start+1],arr[track] = arr[track],arr[start+1] 
+                     break
+            track +=1
+      start += 1
+      track = start + 1
 
-print(nums)
+print(arr) 
