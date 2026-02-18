@@ -12,7 +12,7 @@
 
 #### here we are using the frequency module to get the count of the each element
 
-arr = [4,1,2,1,2]
+arr = [2,2,2,1]
 
 arr_final  = [0] * len(arr)
 
