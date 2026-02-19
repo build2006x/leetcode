@@ -10,3 +10,13 @@ for i in range(len(arr1)-1):
 
 ### this is how i am thinking to print the element using a fixed 
 ### window size where the window size will be matined in the printing statment
+
+
+### working on the sums of sliding window 
+"""
+Given an array [1, 2, 3, 4, 5] and window size k = 3, find the maximum sum of any subarray of size k.
+"""
+
+array  = [1, 2, 3, 4, 5]
+start = 0
+end  = k - 1
