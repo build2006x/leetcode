@@ -68,15 +68,18 @@ Given an array [1, 2, 3, 4, 5] and window size k = 3, find the maximum sum of an
 
 ### using the two pointer approach 
 
-arr = [1, 2, 3, 7, 5, 10, 5] 
-k = 15
+arr = [-2,1,-3,4,-1,2,1,-5,4]
+k = 6
+
 result = []
+
 left = 0
 right = len(arr)
 
 while right != 1:
+      print(arr[left:right])
       if sum(arr[left:right]) == k:
-             result.append(len(arr[left:right]))
-      right -=1
+            result.append(len(arr[left:right]))
+      right -= 1
 
-print(result)
+
