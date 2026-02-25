@@ -17,6 +17,20 @@ for i in range(len(arr1)-1):
 Given an array [1, 2, 3, 4, 5] and window size k = 3, find the maximum sum of any subarray of size k.
 """
 
-array  = [1, 2, 3, 4, 5]
+
+nums = [10, 5, 2, 7, 1, 9]
+k = 15
+window = 1
 start = 0
-end  = k - 1
+result = []
+
+while start != len(nums)-2:
+      while window !=len(nums):
+            if nums[start:window] == k:
+                   result.append(len(nums[start:window]))
+            window +=1
+            start  +=1
+      start = 0
+      window +=1   
+                    
+print(result)
