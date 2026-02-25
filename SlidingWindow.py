@@ -44,22 +44,39 @@ Given an array [1, 2, 3, 4, 5] and window size k = 3, find the maximum sum of an
 
 
 ##### i am incountering the finding the largest subarray ...
-arr = [1, 2, 3, 7, 5, 10, 5] 
-k = 15
-window = 1
-result = []
+# arr = [1, 2, 3, 7, 5, 10, 5] 
+# k = 15
+# window = 1
+# result = []
 
-while window <= len(arr):
-      start = 0
-      while start + window <= len(arr):
-             if sum(arr[start:start+window]) == k:
-                    result.append(window)
-             start +=1
-      window +=1
+# while window <= len(arr):
+#       start = 0
+#       while start + window <= len(arr):
+#              if sum(arr[start:start+window]) == k:
+#                     result.append(window)
+#              start +=1
+#       window +=1
 
-print(max(result))
+# print(max(result))
 
 
 ### a small explanation of this code like 
 ## the approach where the we take the window as subarray lenght and move 
 ### move them each cycle onces the all the window possible lenght is visited means we end up and return the max len in the array
+
+### doing the optimal approach 
+
+### using the two pointer approach 
+
+arr = [1, 2, 3, 7, 5, 10, 5] 
+k = 15
+result = []
+left = 0
+right = len(arr)
+
+while right != 1:
+      if sum(arr[left:right]) == k:
+             result.append(len(arr[left:right]))
+      right -=1
+
+print(result)
