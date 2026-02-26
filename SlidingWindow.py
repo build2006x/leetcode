@@ -68,18 +68,64 @@ Given an array [1, 2, 3, 4, 5] and window size k = 3, find the maximum sum of an
 
 ### using the two pointer approach 
 
-arr = [-2,1,-3,4,-1,2,1,-5,4]
-k = 6
+# arr = [-2,1,-3,4,-1,2,1,-5,4]
+# k = 6
 
-result = []
+# result = []
 
+# left = 0
+# right = len(arr)
+
+# while right != 1:
+#       print(arr[left:right])
+#       if sum(arr[left:right]) == k:
+#             result.append(len(arr[left:right]))
+#       right -= 1
+
+
+#### silding window simple sums to get started
+
+# arr = [1, 2, 3, 4, 5]
+# k = 3
+
+# start = 0
+# end = 3
+# result = []
+
+# while end <= len(arr):
+#       result.append(sum(arr[start:end]))
+#       start +=1
+#       end +=1
+
+
+# print(result)
+
+### what is the problem with above code is about like 
+### every cycle we compute every element which leads to the complexity of o(n2)
+
+### if we use the sliding window techinque to make the complexity to o(n)
+
+#### above sums is about finding the all the subarray window size 3 
+
+arr = [1, 2, 3, 4, 5]
+k = 3
 left = 0
-right = len(arr)
+right = k
+result = []
+windowSum  = sum(arr[left:k])
+result.append(windowSum)
 
-while right != 1:
-      print(arr[left:right])
-      if sum(arr[left:right]) == k:
-            result.append(len(arr[left:right]))
-      right -= 1
+while right < len(arr):
+      windowSum += arr[right] - arr[left]
+      result.append(windowSum)
+      left +=1
+      right +=1
 
+      
+print(result)
 
+### this techinque help us to the compute from  the start again and again 
+
+## insead we can moving the left and right pointer we can know the sum of the element 
+
+### this techinque take out of the complexity of o(n) ---reduce from the o(n2)
