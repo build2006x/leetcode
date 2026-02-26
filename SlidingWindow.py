@@ -107,19 +107,19 @@ Given an array [1, 2, 3, 4, 5] and window size k = 3, find the maximum sum of an
 
 #### above sums is about finding the all the subarray window size 3 
 
-# arr = [1, 2, 3, 4, 5]
-# k = 3
-# left = 0
-# right = k
-# result = []
-# windowSum  = sum(arr[left:k])
-# result.append(windowSum)
+arr = [1, 2, 3, 7, 5, 10, 5] 
 
-# while right < len(arr):
-#       windowSum += arr[right] - arr[left]
-#       result.append(windowSum)
-#       left +=1
-#       right +=1
+k = 15
+left = 0
+right = 3
+windowSum = sum(arr[left:right])
+
+while right < len(arr):    
+      windowSum += arr[right] - arr[left]
+      left +=1
+      right +=1
+      if windowSum == 15:
+            print(arr[left:right])
 
       
 # print(result)
@@ -133,22 +133,22 @@ Given an array [1, 2, 3, 4, 5] and window size k = 3, find the maximum sum of an
 
 ### so far i encounter the fixed size sliding window sum 
 
-arr= [9, -3, 3, -1, 6, -5] 
+# arr= [9, -3, 3, -1, 6, -5] 
 
-start = 0
-end = 1
+# start = 0
+# end = 1
 
-result = []
+# result = []
 
-while end<= len(arr):
-      start = 0
-      while start + end <= len(arr):
-            if sum(arr[start:start+end]) == 0:
-                   result.append(arr[start:start+end])         
-            start +=1
-      end +=1
+# while end<= len(arr):
+#       start = 0
+#       while start + end <= len(arr):
+#             if sum(arr[start:start+end]) == 0:
+#                    result.append(arr[start:start+end])         
+#             start +=1
+#       end +=1
 
-print(len(result[-1]))
+# print(len(result[-1]))
 
 #### this above can we find the both  longest subarray and as well as the smallest one 
 
