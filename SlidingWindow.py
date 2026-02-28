@@ -152,19 +152,19 @@ Given an array [1, 2, 3, 4, 5] and window size k = 3, find the maximum sum of an
 
 #### this above can we find the both  longest subarray and as well as the smallest one 
 
-nums = [5,4,-1,7,8]
-left = 0
-right  = 2
-result = []
-windowSum = sum(nums[left:right])
+# nums = [5,4,-1,7,8]
+# left = 0
+# right  = 2
+# result = []
+# windowSum = sum(nums[left:right])
 
-result.append(windowSum)
+# result.append(windowSum)
 
-while right < len(nums):
-      windowSum += nums[right] - nums[left]
-      result.append(windowSum)
-      left +=1
-      right +=1
+# while right < len(nums):
+#       windowSum += nums[right] - nums[left]
+#       result.append(windowSum)
+#       left +=1
+#       right +=1
 
        
-print(result)
+# print(result)
