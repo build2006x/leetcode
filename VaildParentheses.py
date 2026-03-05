@@ -45,3 +45,7 @@ def VaildPara(string):
 result = VaildPara("()")
 
 print(result)
+
+### basically the algorithm works by put the opening first in the stack and see weather the check the crossponding to the closing bracket is there means 
+### pop the matched pairs in the stack 
+
