@@ -1,23 +1,15 @@
 ### i am working on the sum which have to remove the the front  the remaining values
-nums = [2, 0, 2, 1, 2, 3] 
-val = 2 
-point1 = 0 
-point2 = len(nums) - 1
-count = 0 
+nums = [3,3]
+val = 3
 
-while point1 < point2:
-      if nums[point1] == val and nums[point2] != val:
-             nums[point1],nums[point2] = nums[point2],nums[point1]
-             point1 +=1
-             point2 -=1
-             count +=1
-      elif nums[point1] !=val:
-             point1 +=1
-      elif nums[point1] == val and nums[point2] == val:
-             point2 -=1
-             count +=1
+read  = 0
 
-print(nums[0:len(nums)-count])
-print(count)
+
+for i in nums:
+    if nums[i] == val:
+         nums[read]= nums[i]
+         read +=1
+      
+print(nums[0:read])
 
         
