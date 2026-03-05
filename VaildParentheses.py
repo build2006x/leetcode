@@ -15,15 +15,33 @@ string = "{[()]}"
 # print(len(open_result)==len(close_result))
 ### this above way of approach is not working out 
 
-string = "((())"
 
-arr_dict  = {'[':']','{':'}','(':')'}
-stack = []
 
-for i in string:
-    if i in arr_dict:
-        stack.append(i)
-        if arr_dict[i] in string:
-             stack.pop()
+# for i in string:
+#     if i in arr_dict:
+#         stack.append(i)
+#     else:
+#         if not stack:    
+#            print('no openning string')
+#         top = stack.pop()
+#         if arr_dict[top] != i:
+#            print('invaild')
     
-print(stack)
+
+def VaildPara(string):
+    arr_dict  = {'[':']','{':'}','(':')'}
+    stack = []
+    for i in string:
+        if i in arr_dict:
+            stack.append(i)
+        else:
+            if not stack:    
+               return False
+            top = stack.pop()
+            if arr_dict[top] != i:
+               return False  
+    return True
+
+result = VaildPara("()")
+
+print(result)
