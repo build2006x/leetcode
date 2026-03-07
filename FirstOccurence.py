@@ -37,25 +37,24 @@
 #       print(-1) 
      
 
-haystack = "leetcode"
+haystack = "codeleeto"
 needle = "leeto"
 
 read = 0
 view = 0
-index = -1
-length = len(haystack)
 
-while length < len(haystack):
+length = 0
+index = -1 
+
+while read < len(haystack):
       if haystack[read] == needle[view]:
-             view +=1
-             if view == len(needle)-1:
-                  index = read - view + 1            
-      view =0
-      read +=1
+            read +=1
+            view +=1
+            if view == len(needle):      
+               index = read - view + 1
+               break
+      else:
+           read = read - view +  1
+           view = 0 
 
 print(index)
-
-
-       
-
-    
