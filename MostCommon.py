@@ -1,25 +1,33 @@
 ### hey hi da this leetcode sum is to find the most common words in the string not banned names 
+import re
 
-para = paragraph = "Bob hit a ball, the hit BALL flew far after it was hit.".lower().replace(".","")
-banned = ["hit"]
 
+
+paragraph = paragraph = "Jack and Jill went to the market to buy bread and cheese. Cheese is Jack's favorite food.".lower()
+para = re.sub(r"[.,]", " ",paragraph)
+banned = ["and", "to", "is"]
 arr = para.split(" ")
-
-arrs = [0,3,2,4,4,25,24]
 fre = {}
 
 for i in arr:
-    if i in fre and i !=banned:
-        fre[i] +=1
-    else:
-        fre[i] = 1
+    if i and i not in banned:
+        if i in fre:
+            fre[i] +=1
+        else:
+            fre[i] =1
 
-print(fre)
+max_val = 0
+length = 9 
 
-# print(fre)
-# max_idx = 0
+for key,val in fre.items():
+    max_val = max(max_val,val)
+    if length == 1:
+       for key,val in fre.items():
+           if max_val == val:
+               print(key)
+    length -=1
 
-# for val,idx in fre.items():
-#     if val 
 
-
+### algorithm for this question to solve by 
+### first make the string into lowercase
+### finding the count of the all string 
