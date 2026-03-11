@@ -3,9 +3,9 @@ import re
 
 
 
-paragraph = paragraph = "Jack and Jill went to the market to buy bread and cheese. Cheese is Jack's favorite food.".lower()
+paragraph = paragraph = "Bob hit a ball, the hit BALL flew far after it was hit".lower()
 para = re.sub(r"[.,]", " ",paragraph)
-banned = ["and", "to", "is"]
+banned = ["hit"]
 arr = para.split(" ")
 fre = {}
 
@@ -17,7 +17,7 @@ for i in arr:
             fre[i] =1
 
 max_val = 0
-length = 9 
+length = len(fre)
 
 for key,val in fre.items():
     max_val = max(max_val,val)
