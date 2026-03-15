@@ -11,9 +11,7 @@ for i in nums:
         freq[i] = 1
 
 lenght = len(freq)
-val_idx = 0
+val_idx  = 0
 
-for val,idx in freq.items():
-    val_idx = max(val_idx,idx) 
-
-print(freq.items)
+max_key = max(freq, key=lambda k: freq[k])
+print(max_key) 
