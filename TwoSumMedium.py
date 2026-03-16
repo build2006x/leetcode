@@ -15,13 +15,18 @@
 #     left +=1
 #     right = left + 1
 
+arr = [3, 2, 4]
+target = 6
 
-        
-arr = [2,6,5,8,11]
-target = 15
+freq = {}
 
-left = 0
-right = 2 
+for idx,val in enumerate(arr):
+    complement = target - val
 
-for i,num in enumerate(arr):
-    print(i,num)
+    if complement in freq:
+         print(freq[complement],idx)
+    freq[val] = idx 
+
+### basically how we sovle the problem is 
+### about taking complement for each ieration if found means we will return the index with current index 
+
