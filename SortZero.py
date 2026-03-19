@@ -36,24 +36,48 @@
 
 ### like the brute how we can do means of take the count of the each number and fill based according to that 
 
-
 ### optimal way of sorting the this array using two pointer method of doing this 
+
+
+### --- like trying the better approach ... --- konwing the count of each number and overwrite in the array ...
 
 nums = [2,0,2,1,1,0]
 
-low = 0
+freq = {}
 
-high = len(nums) - 1 
+for i in nums:
+    if i in freq:
+        freq[i] +=1 
+    else:
+       freq[i] = 1
 
+find = 0
+overwrite = 0
+lenght = 3
+while lenght != 0:
+       for idx,val in freq.items():
+              if find == idx:
+                     for i in range(val):
+                            nums[overwrite] = find
+                            overwrite +=1
+                     find +=1
+                     break
+              
+       for idx,val in freq.items():
+              if find == idx:
+                     for i in range(val):
+                            nums[overwrite] = find 
+                            overwrite +=1
+                     find +=1
+                     break
 
-while low < high:
-      if nums[low] > nums[high]:
-             nums[low],nums[high] = nums[high],nums[low]
-             high -=1
-      elif nums[low] < nums[high]:
-             low +=1
-     
+       for idx,val in freq.items():
+              if find == idx:
+                     for i in range(val):
+                            nums[overwrite] = find
+                            overwrite +=1
+                     find +=1
+                     break
+       lenght -=1
+                     
 print(nums)
-
-
-### i am working with the above code to think in two pointer to solve this problem 
