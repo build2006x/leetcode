@@ -41,43 +41,60 @@
 
 ### --- like trying the better approach ... --- konwing the count of each number and overwrite in the array ...
 
+# nums = [2,0,2,1,1,0]
+
+# freq = {}
+
+# for i in nums:
+#     if i in freq:
+#         freq[i] +=1 
+#     else:
+#        freq[i] = 1
+
+# find = 0
+# overwrite = 0
+# lenght = 3
+# while lenght != 0:
+#        for idx,val in freq.items():
+#               if find == idx:
+#                      for i in range(val):
+#                             nums[overwrite] = find
+#                             overwrite +=1
+#                      find +=1
+#                      break
+              
+#        for idx,val in freq.items():
+#               if find == idx:
+#                      for i in range(val):
+#                             nums[overwrite] = find 
+#                             overwrite +=1
+#                      find +=1
+#                      break
+
+#        for idx,val in freq.items():
+#               if find == idx:
+#                      for i in range(val):
+#                             nums[overwrite] = find
+#                             overwrite +=1
+#                      find +=1
+#                      break
+#        lenght -=1
+                     
+# print(nums)
+
 nums = [2,0,2,1,1,0]
 
-freq = {}
+low,mid,high = 0,0,len(nums)-1
 
-for i in nums:
-    if i in freq:
-        freq[i] +=1 
-    else:
-       freq[i] = 1
-
-find = 0
-overwrite = 0
-lenght = 3
-while lenght != 0:
-       for idx,val in freq.items():
-              if find == idx:
-                     for i in range(val):
-                            nums[overwrite] = find
-                            overwrite +=1
-                     find +=1
-                     break
-              
-       for idx,val in freq.items():
-              if find == idx:
-                     for i in range(val):
-                            nums[overwrite] = find 
-                            overwrite +=1
-                     find +=1
-                     break
-
-       for idx,val in freq.items():
-              if find == idx:
-                     for i in range(val):
-                            nums[overwrite] = find
-                            overwrite +=1
-                     find +=1
-                     break
-       lenght -=1
-                     
+while mid <= high:
+     if nums[mid] == 0:
+            nums[mid],nums[low] = nums[low],nums[mid]
+            mid +=1
+            low +=1
+     elif nums[mid] == 1:
+              mid +=1
+     elif nums[mid] == 2:
+             nums[low],nums[high] = nums[high],nums[low]
+             high -=1
+       
 print(nums)
