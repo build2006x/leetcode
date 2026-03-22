@@ -94,7 +94,14 @@ while mid <= high:
      elif nums[mid] == 1:
               mid +=1
      elif nums[mid] == 2:
-             nums[low],nums[high] = nums[high],nums[low]
+             nums[mid],nums[high] = nums[high],nums[mid]
              high -=1
        
 print(nums)
+
+### above code is the dutch flag algorithm which help us to solve the sorting of the spefic three values in constant time of complexity
+
+### if mid ==0 move the low and mid and swap them 
+### if mid == 1 move mid 
+### if mid == 2 move the decrement the high .. and swap the high and mid 
+
