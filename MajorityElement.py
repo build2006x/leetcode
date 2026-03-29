@@ -24,7 +24,7 @@
    
 ### in the above code like the point i am missing is this majority there is a condition was if the element times is greater than 
 
-# nums =  [2,2,1,1,1,2,2]
+# 
 
 # freq = {}
 
@@ -38,4 +38,13 @@
 #     if val > len(nums)//2:
 #         print(idx)
 
+### solving using a two pointer variable 
+nums =  [2,2,1,1,1,2,2]
+left = 0
+right = 0
+pointer = 0 
 
+while pointer < len(nums):
+     for i in range(len(nums)):
+          if nums[pointer] == nums[left]:
+                print('')
