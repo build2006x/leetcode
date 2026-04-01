@@ -1,4 +1,4 @@
-### simple question is to finding the missing the number in the array nput: 
+### simple question is to finding the missing the number in the array input: 
 
 arr = [8, 2, 4, 5, 3, 7, 1]
 

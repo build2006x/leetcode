@@ -40,11 +40,16 @@
 
 ### solving using a two pointer variable 
 nums =  [2,2,1,1,1,2,2]
-left = 0
-right = 0
-pointer = 0 
+count = 0
+el = None
 
-while pointer < len(nums):
-     for i in range(len(nums)):
-          if nums[pointer] == nums[left]:
-                print('')
+for i in nums:
+     if count == 0:
+          el = i 
+     elif i == el:
+          count +=1
+     else:
+          count -=1
+
+
+
