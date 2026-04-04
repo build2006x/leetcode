@@ -44,28 +44,31 @@
 
 ### we preivously used for the majority finding element in the subarray 
 
-nums = [-2,1,-3,4,-1,2,1,-5,4]
-
+nums = [2, 3, 5, -2, 7, -4]
 max_val = float('-inf')
 current_sum = 0
 
-for i in nums:
-    current_sum = current_sum + i
+for idx,val  in enumerate(nums):
+    current_sum = current_sum + val
+    max_val = max(max_val,current_sum)
     if current_sum < 0:
         current_sum = 0
-    max_val = max(max_val,current_sum)
+    print(idx)
 
-print(max_val)
+
+# print(max_val)
 ### above code is to finding the subarray maximum subarray sum ----  
 ### like the point of kandanes law 
 
-### extend the sum if postive element are if you find the negative element means start the subbarray sum as fresh as zero  ...
-
-
+### extend the sum if postive element are if you find the negative element means start the subbarray sum as fresh as zero  
+# ...
+# nums = [2, 3, 5, -2, 7, -4]
 # start = 0
 # window = 0
-
 # max_sum = 0
+
+# sub_left = 0
+# sub_right = 0
 
 # while window <= len(nums):
 #       start = 0
@@ -73,9 +76,14 @@ print(max_val)
 #           code = sum(nums[start:start+window])
 #           if code > max_sum:
 #                max_sum = code 
+#                sub_left,sub_right = start,start+window
 #           start +=1
 #       code = 0
 #       window +=1
 
-# print(max_sum)
+# print(nums[sub_left:sub_right])
+
+#### this above code is to print the subarray of the maximum sum in the given array 
+
+
 
