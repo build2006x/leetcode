@@ -44,17 +44,23 @@
 
 ### we preivously used for the majority finding element in the subarray 
 
-nums = [2, 3, 5, -2, 7, -4]
+nums = [-2, -3, -7, -2, -10, -4] 
 max_val = float('-inf')
 current_sum = 0
+start = 0
+end = 0
 
 for idx,val  in enumerate(nums):
     current_sum = current_sum + val
-    max_val = max(max_val,current_sum)
+    if max_val < current_sum:
+         max_val = current_sum
+         end  = idx
     if current_sum < 0:
-        current_sum = 0
-    print(idx)
+        current_sum = 0 
+        start = idx 
 
+print(nums[start:end+1])
+print(max_val)
 
 # print(max_val)
 ### above code is to finding the subarray maximum subarray sum ----  
