@@ -44,7 +44,7 @@
 
 ### we preivously used for the majority finding element in the subarray 
 
-nums = [-2, -3, -7, -2, -10, -4] 
+nums = [1, 2, 3, 4, 5]
 max_val = float('-inf')
 current_sum = 0
 start = 0
@@ -61,6 +61,9 @@ for idx,val  in enumerate(nums):
 
 print(nums[start:end+1])
 print(max_val)
+
+### bascially what we are doing is we have to update the start of the measuring length when the starting fresh of index ..
+#### we want update the end variable when the maximum sum being update ...
 
 # print(max_val)
 ### above code is to finding the subarray maximum subarray sum ----  
