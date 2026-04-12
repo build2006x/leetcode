@@ -25,14 +25,15 @@
 
 ### likely today i wanted to try some other way to solve the problem of the best time to buy the stock 
 
-prices = [7,6,4,3,1]
+prices = [7, 1, 5, 3, 6, 4]
 
-market_entry  = prices[0] 
-market_exit   = 0
+best_prices = float('-inf')
+val = 0  
 
-for num in range(1,len(prices)):
-    market_entry = min(market_entry,prices[num])
-    market_exit = max(market_exit,prices[num])
+for i in range(0,len(prices)-1):
+    val = prices[i+1] - prices[i]
+    best_prices  = max(best_prices,val)
+
+print(best_prices)
 
 
-print(market_exit)
