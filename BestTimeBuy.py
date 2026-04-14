@@ -25,15 +25,19 @@
 
 ### likely today i wanted to try some other way to solve the problem of the best time to buy the stock 
 
-prices = [7, 1, 5, 3, 6, 4]
+prices = [7,1,5,3,6,4]
 
-best_prices = float('-inf')
-val = 0  
+min_prices  = float('inf')
+profit = 0
+#### we always use teh inf to track of the lowest number to track 
+#### -inf is used to track of the largest num
 
-for i in range(0,len(prices)-1):
-    val = prices[i+1] - prices[i]
-    best_prices  = max(best_prices,val)
+### the logic to solve this problem using single loop
 
-print(best_prices)
+for rate in prices:
+    if rate < min_prices:
+        min_prices = rate
+    elif rate - min_prices > profit:
+            profit = rate - min_prices
 
-
+print(profit)
