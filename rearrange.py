@@ -1,6 +1,6 @@
 ### hey hi today i am working on the problem rearrange according to the postive and negative in the order 
 
-arr = [1,2,-4,-5]
+arr = [3,1,-2,-5,2,-4]
 
 p = []
 n = []
@@ -12,11 +12,16 @@ for i in arr:
         p.append(i)
 
 result = []
+read = 0
 
 for i in range(0,len(arr)):
     if i < len(p):
-      result.append(p[i])
+      arr[read] = p[i]
+      read +=1
     if  i < len(n):
-      result.append(n[i])
+      arr[read] = n[i]
+      read +=1
 
-print(result)
+print(arr)
+
+### let us think in the two pointer method to avoid the extra  memory useage 
