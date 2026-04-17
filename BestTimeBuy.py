@@ -25,19 +25,27 @@
 
 ### likely today i wanted to try some other way to solve the problem of the best time to buy the stock 
 
-prices = [7,1,5,3,6,4]
 
-min_prices  = float('inf')
+# min_prices  = float('inf')
+# profit = 0
+# #### we always use teh inf to track of the lowest number to track 
+# #### -inf is used to track of the largest num
+
+# ### the logic to solve this problem using single loop
+
+# for rate in prices:
+#     if rate < min_prices:
+#         min_prices = rate
+#     elif rate - min_prices > profit:
+#             profit = rate - min_prices
+
+# print(profit)
+
+prices = [7,6,4,3,1]
 profit = 0
-#### we always use teh inf to track of the lowest number to track 
-#### -inf is used to track of the largest num
+for rate in range(0,len(prices)):
+    for rating in range(rate+1,len(prices)):
+        print(prices[rating]-prices[rate])
+        if prices[rating] - prices[rate]  > profit:
+            profit = prices[rating] - prices[rate]
 
-### the logic to solve this problem using single loop
-
-for rate in prices:
-    if rate < min_prices:
-        min_prices = rate
-    elif rate - min_prices > profit:
-            profit = rate - min_prices
-
-print(profit)
