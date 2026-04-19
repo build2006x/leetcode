@@ -1,27 +1,49 @@
 ### hey hi today i am working on the problem rearrange according to the postive and negative in the order 
 
-arr = [3,1,-2,-5,2,-4]
+# arr = [3,1,-2,-5,2,-4]
+# p = []
+# n = []
 
-p = []
-n = []
+# for i in arr:
+#     if i < 0:
+#         n.append(i)
+#     else:
+#         p.append(i)
 
-for i in arr:
-    if i < 0:
-        n.append(i)
-    else:
-        p.append(i)
+# result = []
+# read = 0
+# for i in range(0,len(arr)):
+#     if i < len(p):
+#       arr[read] = p[i]
+#       read +=1
+#     if  i < len(n):
+#       arr[read] = n[i]
+#       read +=1
 
-result = []
-read = 0
-
-for i in range(0,len(arr)):
-    if i < len(p):
-      arr[read] = p[i]
-      read +=1
-    if  i < len(n):
-      arr[read] = n[i]
-      read +=1
-
-print(arr)
+# print(arr)
 
 ### let us think in the two pointer method to avoid the extra  memory useage 
+
+arr = [3,1,-2,-5,2,-4]
+
+left  = 0
+right = 1
+
+while right < len(arr):
+      if arr[left] > 0 and arr[right] > 0:
+              left +=1
+              right = left + 1
+
+      elif arr[left] < 0 and arr[right] > 0:
+             arr[left],arr[right] = arr[right],arr[left]
+             left +=1
+             right = left + 1
+
+      elif arr[left] > 0 and arr[right] < 0 or arr[left] < 0 and arr[right] < 0:
+            if right+1 < len(arr):
+                    if arr[right+1] < 0:
+                       arr[right],arr[right+1] = arr[right+1],arr[right]
+                       left +=1 
+                       right = left + 1
+print(arr)      
+                      
