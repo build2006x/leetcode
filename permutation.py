@@ -3,5 +3,11 @@
 ### three case we have in the recurssion -- base_case -- main logic -- recurssive call  
 
 
-arr = [1, 2, 3]
 
+
+def take_home(arr,pointer):
+    if pointer == len(arr):
+        return 
+    return take_home(arr,pointer)
+
+take_home(arr = [1, 2, 3],pointer=0)
