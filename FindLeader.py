@@ -7,7 +7,7 @@ result = []
 while reader < len(arr):
       while pointer < len(arr): 
          if arr[reader] > arr[pointer]:
-              pointer +=1
+             pointer +=1
          else:
               break 
       if pointer == len(arr):
