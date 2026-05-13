@@ -7,8 +7,13 @@ matrix=[
         [1,1,1]
 ]
 
+for i in matrix:
+    for j in range(0,1):
+        print(i[j],i[j+1],i[j+2])
 
-            
+
+
+
 
 
 
