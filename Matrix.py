@@ -26,3 +26,7 @@ for i in matrix:
 for i in matrix:
    print(i)
 
+
+
+### like i am writing my perspective from the above is to came out the 6 loop
+## how i am thinking find the index and mark the row and col zero --- two loop for finding and two loop for zero 
