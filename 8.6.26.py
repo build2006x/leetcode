@@ -5,16 +5,19 @@ k=6
 
 left = 0
 right = 1
-actual = 0
+count = 1
 
-while right < len(array):
-      while right < len(array):
-            if array[left] + array[right] == k:
-                  print([left,right])
-            right +=1
-      left = right + 1
+while left < len(array):
+    while right < len(array):
+         if array[left:right+1] == k:
+              print(array[left],array[right])
+         right +=1
+    right = left + 1
 
 
 
+      
+      
+      
 
 
