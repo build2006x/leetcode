@@ -11,8 +11,6 @@ for left in range(len(array)): ### keeping the left as a fixed lock ----
             print(array[left:right+1])
 
 #### next i wanted to learn the siliding window technique ? 
-      
-      
-      
 
-
+# window = array[0] + array[1]
+      
