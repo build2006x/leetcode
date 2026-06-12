@@ -13,6 +13,8 @@ matrix = [
     [7, 8, 9]
 ]
 
+print(matrix[1][1])
+
 # Transpose: swap rows and columns
 n = len(matrix)
 
