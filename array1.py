@@ -1,11 +1,22 @@
 ### today i am working on the leetcode array -- 2 question 4. Median of Two Sorted Arrays
 
-nums1 = [1,3]
-nums2 = [2]
+nums1 = [1,2]
+nums2 = [3,4]
 
-new_array = []
+for i in range(len(nums2)):
+    nums1.append(nums2[i]) 
+    
+nums1.sort()
 
-a = 3.43
+if len(nums1) % 2 !=0:
+     index = len(nums1) % 2 
+     print(nums1[index])
 
-print(a.__floor__())
+else:
+    index = len(nums1) % 2 
+    final = nums1[index] + nums1[index+1] % 2
+
+    
+
+    
 
