@@ -8,10 +8,9 @@ pointer = 0
 while True:  
       if strs[0][pointer] == strs[1][pointer] == strs[2][pointer]:
               pointer +=1
-      else: 
-            print(strs[0][pointer])
+      else:
             break
-      
- 
-
+for i in strs:
+       print(i[0:pointer])
+       break
 
