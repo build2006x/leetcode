@@ -9,14 +9,15 @@ for i in range(len(nums2)):
 nums1.sort()
 
 if len(nums1) % 2 !=0:
-     index = len(nums1) % 2 
-     print(nums1[index])
+     index = len(nums1)/2 
+     print(nums1[index.__floor__()])
 
 else:
-    index = len(nums1) % 2 
-    final = nums1[index] + nums1[index+1] % 2
+    index = len(nums1)/2
+    final = nums1[(index-1).__floor__()] + nums1[(index).__floor__()]   
+    print(final/2)
 
-    
 
+print(5/2)
     
 
