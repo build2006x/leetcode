@@ -5,27 +5,48 @@ nums  = [-100,-70,-60,110,120,130,160]
 
 nums.sort()
 
-print(nums)
-
 fixed = 0
-left = fixed + 1
-right = 2
+left = 0
+right = left + 1
 result = []
 
-while fixed != 4:
-    while right < len(nums):
-          if nums[fixed] + nums[left] + nums[right] == 0:
-                if [nums[fixed],nums[right],nums[left]] not in result:
-                     result.append([nums[fixed],nums[left],nums[right]])
-          right +=1
-          left +=1
-          print(nums[fixed],nums[left],nums[right])
-    fixed +=1
-    left = fixed + 1
-    right = left + 1
-    break
+
+while fixed != len(nums) - 1:
+      while right < len(nums):
+         if nums[fixed] + nums[left] + nums[right] == 0:
+                if [nums[fixed],nums[left],nums[right]] not in result:
+                        result.append([nums[fixed],nums[left],nums[right]])
+         right +=1
+         left +=1
+      fixed +=1
+      left = 0
+      right = left + 1          
 
 print(result)
+
+# nums.sort()
+
+# print(nums)
+
+# fixed = 0
+# left = fixed + 1
+# right = 2
+# result = []
+
+# while fixed != 4:
+#     while right < len(nums):
+#           if nums[fixed] + nums[left] + nums[right] == 0:
+#                 if [nums[fixed],nums[right],nums[left]] not in result:
+#                      result.append([nums[fixed],nums[left],nums[right]])
+#           right +=1
+#           left +=1
+#           print(nums[fixed],nums[left],nums[right])
+#     fixed +=1
+#     left = fixed + 1
+#     right = left + 1
+#     break
+
+# print(result)
 
             
 
