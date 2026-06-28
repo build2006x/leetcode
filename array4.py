@@ -1,7 +1,7 @@
 ### hi today i am working on the 3sum problem 
 ##3sum question is focusing on the finding the pairs of array where sum equals to  0 
 
-nums  = [-100,-70,-60,110,120,130,160]
+nums  = [-1,0,1,2,-1,-4]
 
 nums.sort()
 
@@ -15,14 +15,12 @@ while fixed != len(nums) - 1:
       while right < len(nums):
          if nums[fixed] + nums[left] + nums[right] == 0:
                 if [nums[fixed],nums[left],nums[right]] not in result:
-                        result.append([nums[fixed],nums[left],nums[right]])
+                        print(nums[fixed],nums[left],nums[right])
          right +=1
          left +=1
       fixed +=1
       left = 0
       right = left + 1          
-
-print(result)
 
 # nums.sort()
 
