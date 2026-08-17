@@ -23,4 +23,6 @@ for idx,i in enumerate(pattern):
              checker.add(arr[idx]) 
 
 
+
+print('hey hi this is msg to check my git is being tracking my change')
          
