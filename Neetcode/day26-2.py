@@ -9,6 +9,5 @@ ar = Counter(arr)
 
 for fre,val in ar.items():
     if fre == val:
-        
+        print(val)
 
-print(count)
