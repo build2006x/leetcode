@@ -3,9 +3,10 @@
 ### no shift cant be equal to the sorted array means return False 
 
 
-nums = [2,1]
-pointer = 0
+nums=[3,4,5,1,2]
+pointer = 1
 roated_arr = []
+
 
 if sorted(nums) == nums:
     print('true')
@@ -16,6 +17,9 @@ while pointer < len(nums):
       print('True')
       break
    else:
+        roated_arr  = []
         roated_arr = nums[pointer:] + nums[:pointer]
         pointer +=1
+        if sorted(nums) == roated_arr:
+             print('TRUE')
 
