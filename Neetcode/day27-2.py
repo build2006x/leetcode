@@ -3,8 +3,8 @@
 ### no shift cant be equal to the sorted array means return False 
 
 
-nums =[1,2,3]
-pointer = 1
+nums = [2,1]
+pointer = 0
 roated_arr = []
 
 if sorted(nums) == nums:
