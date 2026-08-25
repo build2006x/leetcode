@@ -2,8 +2,10 @@
 
 from collections import Counter
 
-nums = [3,2,3,2,2,2]
-
+nums = [1,2,3,4]
 n_len = Counter(nums)
 
-print(n_len)
+for i in n_len.keys():
+    if i % 2 != 0:
+        print('Flase')
+
