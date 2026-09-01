@@ -7,3 +7,4 @@ algorithm****
 2.before compare with all other same pair would not be compared 
 3.compute each pair of the sum and store in the array return the max one 
 """
+nums = [5,6,2,7,4]
