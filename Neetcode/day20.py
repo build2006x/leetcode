@@ -1,6 +1,3 @@
-### they said us problem 
+### hi today i am working on the Valid Word Abbreviation (problem)
 
-
-nums = [-2,0,3,-5,2,-1]
-
-print(sum(nums[0:4]))
+#### 
