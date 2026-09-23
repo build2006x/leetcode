@@ -18,9 +18,8 @@ logic gain
 
 """
 
-nums = [-3,4,3,2]
-s = sorted(nums)
-pivot = 2
+nums = [9,12,5,10,14,3,10]
+pivot = 10
 small = []
 big = []
 main_idx = 0
@@ -32,26 +31,33 @@ for idx,val in enumerate(nums):
     if val == pivot:
          main_idx = idx
          l = main_idx - 1
-         r = main_idx + 1
          break
 
-for idx,i in enumerate(s):
+for idx,i in enumerate(nums):
      if i < pivot and idx != main_idx:
           small.append(i)
-     elif i >= pivot and idx != main_idx:
+     elif i >= pivot  and idx != main_idx:
          big.append(i)
 
 small = sorted(small)
 big = sorted(big)
 
+
 for i in small:
-    if l >= 0:
+     if l != -1:
         nums[l] = i
-        l -= 1
+        l -=1
+
+val = len(nums) //2 
+if val % 2 == 0:
+     val -=1
+
+r = val + 1
+nums[val] = pivot
 
 for j in big:
-    if r < len(nums):
-         nums[r] = j
-         r +=1
+     if r < len(nums):
+        nums[r] = j
+        r +=1
 
 print(nums)
