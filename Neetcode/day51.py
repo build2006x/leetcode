@@ -1,18 +1,34 @@
 ############## hey hi today i am working on the 
 nums=[1,2,3,4,5,6,7]
-k=3
 
-k_val = k % len(nums)
+k = 3
+k = k % len(nums)
 
-r = -k
 
-p1 = 0
 l = 0
+r = len(nums) -1 
 
-while p1 < k:
-     nums[r],nums[l] = nums[l],nums[r]
-     r +=1
+
+while l < r:
+     nums[l],nums[r] = nums[r],nums[l]
      l +=1
-     p1 +=1
+     r -=1
+
+l = 0
+r = k - 1
+
+while l < r:
+       nums[l],nums[r] = nums[r],nums[l]
+       l +=1
+       r -=1
+
+l = k 
+r = len(nums) -1  
+
+while l < r:
+       nums[l],nums[r] = nums[r],nums[l]
+       l +=1
+       r -=1
+
 
 print(nums)
