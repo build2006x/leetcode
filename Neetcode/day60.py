@@ -1,25 +1,22 @@
 #### hey hi toady i am working on the 
-prices = [10,8,7,5,2]
+prices=[2,1,2,0,1]
 
 l = 0 
 r = 1
-min_price = prices[0]
-max_price = 0
+max_profit = 0
 
 while r < len(prices): 
         if r <len(prices) and prices[l] < prices[r]:
-            min_price = min(min_price,prices[l])
-            max_price = max(max_price,prices[r])
+            if (prices[r] - prices[l]) > max_profit:
+                    max_profit = prices[r] - prices[l]
             r +=1
         else:
              l = r
              r +=1
 
-        
-if (max_price-min_price) < 0:
+if (max_profit) < 0:
        print('no profit cant make')
-
 else:
-      print(max_price-min_price)
+      print(max_profit)
 
          
