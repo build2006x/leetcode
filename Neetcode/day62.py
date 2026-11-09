@@ -2,45 +2,29 @@
 customers = [1,0,1,2,1,1,7,5]
 grumpy = [0,1,0,1,0,1,0,1] 
 minutes = 3
+ sum_val = 0 
 
-# 
+        pointer = 0
 
-# for i in range(len(customers)-minutes,len(customers)):
-#          sum_val +=customers[i]
+        while pointer < len(customers): 
+                if grumpy[pointer] == 0:
+                      sum_val += customers[pointer]
+                pointer +=1
+        print(sum_val)
+        window_sum = sum(customers[0:minutes])
+   
+        max_size = window_sum
+        l = 0
+        r = minutes - 1
 
-# pointer = 0
+        while r < len(customers):
+                window_sum = window_sum - customers[l] + customers[r] 
+                if window_sum >max_size:
+                            max_size = window_sum
+                r +=1
+                l +=1
 
-# while pointer < len(customers)-minutes:
-#          if grumpy[pointer] == 0:
-#                    sum_val += customers[pointer]
-#          pointer +=1
-
-
-# print(sum_val)
-    
-sum_val = 0
-pointer = 0
-
-while pointer < len(customers):
-      if grumpy[pointer] == 0:
-               
-                    sum_val +=customers[pointer]
-      pointer +=1
-
-
-pointer = 0
-count = 0
-
-s_array = sorted(customers)
-
-
-while count < minutes and pointer < len(customers):
-        if grumpy[pointer] == 1:
-                 
-                    sum_val +=customers[pointer]
-                    count +=1
-        pointer +=1
-
-                
-            
+        print(max_size)
+        
+        return sum_val +  window_sum
                  
