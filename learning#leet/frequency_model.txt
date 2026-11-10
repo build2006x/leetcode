@@ -1,0 +1,12 @@
+Day 1 Log: LeetCode Anagram Problem
+
+Today you tackled the Valid Anagram problem, focusing on the core concept of character frequency tracking in strings.
+Key Takeaways & Approaches Learned:
+
+* Core Concept: Verifying if two strings contain the exact same characters with the exact same frequencies.
+
+* Approach 1 (Built-in Counter): Used Python’s Counter module to quickly map and compare character distributions.
+
+* Approach 2 (Length Check & Python Mechanics):
+• Implemented an optimized base case check (if string lengths are different, return False immediately).
+• Leveraged Python's equality mechanics to verify if the character structures perfectly match.
