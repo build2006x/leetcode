@@ -1,25 +1,17 @@
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
+#
+## practice the linked list -- syntax to get better at solving problem 
+class Nodelist:
+    def __init__(self,data):
+        self.data = data
+        self.next  = None
 
-# Convert Python list [1, 2, 3] -> Linked List
-def build_linked_list(arr):
-    dummy = ListNode(0)
-    curr = dummy
-    for num in arr:
-        curr.next = ListNode(num)
-        curr = curr.next
-    return dummy.next
+    def  Create_node(self,val):
+         curr = Nodelist(val)
+         while curr.next is not None:
+             print(curr.data,"->")
+             curr = curr.next
+          
 
-# Print Linked List nicely in terminal
-def show(head):
-    vals = []
-    while head:
-        vals.append(str(head.val))
-        head = head.next
-    print(" -> ".join(vals) + " -> None")
-
-# Test it out:
-head = build_linked_list([10, 20, 30, 40])
-show(head)  # Output: 10 -> 20 -> 30 -> 40 -> None
+res = Nodelist(10)
+s = res.Create_node(10)
+print(res)
